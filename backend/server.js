@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const dotenv = require("dotenv");
 
@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-const striperoutes = require("./routes/stripeRoute")
+const striperoutes = require("./routes/stripeRoute");
 
 app.use(cors());
 app.use(express.json());
@@ -18,12 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/stripe", striperoutes);
 
-//mongodb+srv://sanduni:TrNP0tOAcqjDoCEf@cluster0.wkjd4kp.mongodb.net/
+const PORT = process.env.PORT || 3000;
 
-
-
-    const PORT = process.env.PORT || 3000;
-
-    app.listen(PORT, () => {
-        console.log(`Listening on port ${PORT}...`);
-    });
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
+});

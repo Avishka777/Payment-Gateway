@@ -1,17 +1,13 @@
-import PaymentGateway from "./Pages/PaymentGateway"
-
-
+import PaymentGateway from "./Pages/PaymentGateway";
 
 function App() {
-
   return (
     <>
       <div>
-        <h1>Payment</h1>
-        <PaymentGateway/>
+        <PaymentGateway />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
